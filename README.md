@@ -1,0 +1,3 @@
+- This project contains two files feature file and json file
+- Feature file: Contains API automation test scenarios
+- Json file: Contains JSON response for List of users
