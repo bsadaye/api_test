@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/main\/resources\/features\/reqres[1:7]","start":1631111093310,"end":1631111094184,"title":"src\/main\/resources\/features\/reqres[1:7] 19:54:53.310-19:54:54.184 Login to application"},{"id":2,"group":1,"content":"src\/main\/resources\/features\/reqres[2.1:38]","start":1631111094185,"end":1631111094512,"title":"src\/main\/resources\/features\/reqres[2.1:38] 19:54:54.185-19:54:54.512 Send multiple users to register"},{"id":3,"group":1,"content":"src\/main\/resources\/features\/reqres[2.2:39]","start":1631111094513,"end":1631111094840,"title":"src\/main\/resources\/features\/reqres[2.2:39] 19:54:54.513-19:54:54.840 Send multiple users to register"},{"id":4,"group":1,"content":"src\/main\/resources\/features\/reqres[2.3:40]","start":1631111094841,"end":1631111095184,"title":"src\/main\/resources\/features\/reqres[2.3:40] 19:54:54.841-19:54:55.184 Send multiple users to register"},{"id":5,"group":1,"content":"src\/main\/resources\/features\/reqres[2.4:41]","start":1631111095185,"end":1631111095512,"title":"src\/main\/resources\/features\/reqres[2.4:41] 19:54:55.185-19:54:55.512 Send multiple users to register"},{"id":6,"group":1,"content":"src\/main\/resources\/features\/reqres[3:43]","start":1631111095513,"end":1631111095606,"title":"src\/main\/resources\/features\/reqres[3:43] 19:54:55.513-19:54:55.606 Get method to retrieve list of users"},{"id":7,"group":1,"content":"src\/main\/resources\/features\/reqres[4:51]","start":1631111095623,"end":1631111095965,"title":"src\/main\/resources\/features\/reqres[4:51] 19:54:55.623-19:54:55.965 Put method example"},{"id":8,"group":1,"content":"src\/main\/resources\/features\/reqres[5:66]","start":1631111095966,"end":1631111096294,"title":"src\/main\/resources\/features\/reqres[5:66] 19:54:55.966-19:54:56.294 Delete method example"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

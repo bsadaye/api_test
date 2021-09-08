@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/main\/resources\/features\/reqres[1:7]","start":1631109000056,"end":1631109000904,"title":"src\/main\/resources\/features\/reqres[1:7] 19:20:00.056-19:20:00.904 Login to application"},{"id":2,"group":1,"content":"src\/main\/resources\/features\/reqres[2.1:39]","start":1631109000913,"end":1631109001228,"title":"src\/main\/resources\/features\/reqres[2.1:39] 19:20:00.913-19:20:01.228 Send multiple users to register","className":"failed"},{"id":3,"group":1,"content":"src\/main\/resources\/features\/reqres[2.2:40]","start":1631109001234,"end":1631109001553,"title":"src\/main\/resources\/features\/reqres[2.2:40] 19:20:01.234-19:20:01.553 Send multiple users to register","className":"failed"},{"id":4,"group":1,"content":"src\/main\/resources\/features\/reqres[2.3:41]","start":1631109001558,"end":1631109001867,"title":"src\/main\/resources\/features\/reqres[2.3:41] 19:20:01.558-19:20:01.867 Send multiple users to register","className":"failed"},{"id":5,"group":1,"content":"src\/main\/resources\/features\/reqres[2.4:42]","start":1631109001872,"end":1631109002216,"title":"src\/main\/resources\/features\/reqres[2.4:42] 19:20:01.872-19:20:02.216 Send multiple users to register","className":"failed"},{"id":6,"group":1,"content":"src\/main\/resources\/features\/reqres[3:44]","start":1631109002221,"end":1631109002275,"title":"src\/main\/resources\/features\/reqres[3:44] 19:20:02.221-19:20:02.275 Get method to retrive list of users","className":"failed"},{"id":7,"group":1,"content":"src\/main\/resources\/features\/reqres[4:52]","start":1631109002280,"end":1631109002611,"title":"src\/main\/resources\/features\/reqres[4:52] 19:20:02.280-19:20:02.611 Put method example","className":"failed"},{"id":8,"group":1,"content":"src\/main\/resources\/features\/reqres[5:67]","start":1631109002616,"end":1631109002945,"title":"src\/main\/resources\/features\/reqres[5:67] 19:20:02.616-19:20:02.945 Delete method example"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
